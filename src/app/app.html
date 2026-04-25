@@ -1,0 +1,17 @@
+<main class="app-container">
+  <!-- Temporary NavBar -->
+  <nav style="padding: 1rem 2rem; background: var(--surface-card); box-shadow: var(--shadow-bento); border-radius: var(--radius-bento); margin: 1rem; display: flex; justify-content: space-between; align-items: center;">
+    <h2 style="margin: 0; color: var(--cobalt); cursor: pointer;" routerLink="/">SafariTalk</h2>
+    
+    <!-- Enlaces (Desktop) -->
+    <div style="display: flex; gap: 1.5rem; align-items: center;">
+      <a routerLink="/tutors" style="text-decoration: none; color: var(--text-main); font-weight: 600; cursor: pointer;">🔍 Buscar Tutores</a>
+      <a routerLink="/become-tutor" style="text-decoration: none; color: var(--text-main); font-weight: 600; cursor: pointer;">🧑‍🏫 Convertirse en Tutor</a>
+      <button class="btn-bento btn-clay" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Ingresar</button>
+    </div>
+  </nav>
+
+  <div style="padding: 1rem;">
+    <router-outlet />
+  </div>
+</main>

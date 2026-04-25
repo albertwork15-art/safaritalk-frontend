@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  /* Earth Tones */
+  --clay: #D08770;
+  --clay-dark: #b86b51;
+  --ochre: #EBCB8B;
+  --ochre-dark: #d8b46e;
+  --sunset: #BF616A;
+  --sunset-dark: #a04951;
+  
+  /* Accents */
+  --green-deep: #4F6367;
+  --green-deep-dark: #3a4a4d;
+  --cobalt: #5E81AC;
+  --cobalt-dark: #43648a;
+
+  /* Surfaces & Text */
+  --surface-bg: #eceae4; /* Slightly warm light bg */
+  --surface-card: #FFFFFF;
+  --text-main: #2E3440;
+  --text-light: #4C566A;
+  
+  /* Bento Styling */
+  --radius-bento: 18px;
+  --radius-bento-sm: 12px;
+  --shadow-bento: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--surface-bg);
+  color: var(--text-main);
+  /* Subtle Kente/Mudcloth Background SVG Pattern (Geometrics) */
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23d08770' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* === BENTO UI SYSTEM === */
+
+.bento-card {
+  background: var(--surface-card);
+  border-radius: var(--radius-bento);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-bento);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Duolingo-style Pressable Buttons */
+.btn-bento {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 16px;
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  /* Ensure it doesn't bounce around on active */
+  position: relative;
+  top: 0;
+}
+
+.btn-bento:active {
+  top: 4px; /* moves down purely by shifting */
+}
+
+/* Cobalt Button (Primary) */
+.btn-cobalt {
+  background-color: var(--cobalt);
+  color: white;
+  border-bottom: 4px solid var(--cobalt-dark);
+}
+.btn-cobalt:active {
+  border-bottom: 0px solid var(--cobalt-dark);
+  margin-bottom: 4px; /* maintain space */
+}
+
+/* Clay Button (Secondary) */
+.btn-clay {
+  background-color: var(--clay);
+  color: white;
+  border-bottom: 4px solid var(--clay-dark);
+}
+.btn-clay:active {
+  border-bottom: 0px solid var(--clay-dark);
+  margin-bottom: 4px;
+}
+
+/* Deep Green Button (Action) */
+.btn-green {
+  background-color: var(--green-deep);
+  color: white;
+  border-bottom: 4px solid var(--green-deep-dark);
+}
+.btn-green:active {
+  border-bottom: 0px solid var(--green-deep-dark);
+  margin-bottom: 4px;
+}
+
+/* Titles */
+h1, h2, h3 {
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}

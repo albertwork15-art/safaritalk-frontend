@@ -1,0 +1,65 @@
+<div style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+  
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; color: var(--clay-dark);">Únete como Tutor</h1>
+    <p style="color: var(--text-light); font-size: 1.1rem; margin-top: 0.5rem;">
+      Comparte tu idioma y cultura con estudiantes de todo el mundo.
+    </p>
+  </div>
+
+  <form class="bento-card" style="background: var(--surface-bg); border-top: 5px solid var(--clay);" (submit)="submitApplication($event)">
+    <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+      <!-- Nombre -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label style="font-weight: 600; color: var(--text-main);">Nombre Completo</label>
+        <input type="text" required placeholder="Ej. Juan Pérez" style="padding: 1rem; border-radius: 12px; border: 2px solid transparent; outline: none; background: white; font-family: Outfit; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main);">
+      </div>
+
+      <!-- Email -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label style="font-weight: 600; color: var(--text-main);">Correo Electrónico</label>
+        <input type="email" required placeholder="juan@ejemplo.com" style="padding: 1rem; border-radius: 12px; border: 2px solid transparent; outline: none; background: white; font-family: Outfit; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main);">
+      </div>
+    </div>
+
+    <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+      <!-- Idioma Nativo -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label style="font-weight: 600; color: var(--text-main);">Idioma a Enseñar</label>
+        <select style="padding: 1rem; border-radius: 12px; border: 2px solid transparent; outline: none; background: white; font-family: Outfit; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main);">
+          <option>Inglés</option>
+          <option>Francés</option>
+          <option>Portugués</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <!-- Tarifa -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label style="font-weight: 600; color: var(--text-main);">Tarifa Esperada ($/hora)</label>
+        <input type="number" required placeholder="15" min="5" style="padding: 1rem; border-radius: 12px; border: 2px solid transparent; outline: none; background: white; font-family: Outfit; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main);">
+      </div>
+    </div>
+
+    <!-- Bio -->
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+      <label style="font-weight: 600; color: var(--text-main);">Acerca de Ti (Biografía)</label>
+      <textarea required rows="4" placeholder="Cuéntanos sobre tu experiencia y por qué quieres enseñar..." style="padding: 1rem; border-radius: 12px; border: 2px solid transparent; outline: none; background: white; font-family: Outfit; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main); resize: vertical;"></textarea>
+    </div>
+
+    <!-- Submit Action -->
+    <button type="submit" class="btn-bento btn-clay" style="width: 100%; padding: 1rem; font-size: 1.2rem; border-radius: 14px;">
+      Enviar Aplicación
+    </button>
+  </form>
+
+  <div class="bento-card" style="margin-top: 2rem; background-color: var(--green-light); border: none;">
+    <h3 style="color: var(--green-deep); margin-top: 0;">¿Por qué enseñar en SafariTalk?</h3>
+    <ul style="color: var(--text-main); line-height: 1.6; padding-left: 1.2rem; margin-bottom: 0;">
+      <li>Flexibilidad de horarios. Trabaja donde y cuando quieras.</li>
+      <li>Conoce estudiantes de culturas increíbles, todo 100% online.</li>
+      <li>Pagos seguros y sin comisiones escondidas.</li>
+    </ul>
+  </div>
+
+</div>
