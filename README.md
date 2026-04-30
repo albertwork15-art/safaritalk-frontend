@@ -2,6 +2,8 @@
 
 SafariTalk es una plataforma integral de aprendizaje de idiomas diseñada para conectar a estudiantes con tutores en sesiones en tiempo real. Este repositorio contiene la implementación del frontend, desarrollada con el objetivo de proporcionar una interfaz de usuario altamente reactiva, escalable e intuitiva.
 
+> 💡 **Nota para el Reclutador:** Este repositorio contiene únicamente la aplicación de interfaz de usuario (Frontend). Puedes explorar la arquitectura, la API REST y la lógica de negocio en el **[Repositorio del Backend (Spring Boot) ⚙️](https://github.com/albertwork15-art/lenguage-platform)**.
+
 La aplicación refleja un fuerte compromiso con las mejores prácticas de ingeniería de software modernas, centrándose en la modularidad, la optimización del rendimiento y la mantenibilidad a largo plazo.
 
 ## Stack Tecnológico
