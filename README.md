@@ -8,7 +8,7 @@ La aplicación refleja un fuerte compromiso con las mejores prácticas de ingeni
 
 ## Stack Tecnológico
 
-- **Framework:** Angular 18
+- **Framework:** Angular 21
 - **Lenguaje:** TypeScript
 - **Estilos:** Vanilla CSS (Diseño responsivo y utilidades a medida)
 - **Gestión de Estado:** Angular Signals
