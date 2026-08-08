@@ -1,0 +1,56 @@
+<div style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem; position: relative;">
+  
+  <div style="margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; color: var(--cobalt-dark);">Nuestros Tutores</h1>
+    <p style="color: var(--text-light); font-size: 1.1rem;">
+      Encuentra al profesor ideal para comenzar tu viaje y dominar nuevos idiomas.
+    </p>
+  </div>
+
+  <!-- Filters Placeholder -->
+  <div class="bento-card" style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; padding: 1rem 1.5rem; background: var(--surface-bg);">
+    <span style="font-weight: 600; color: var(--text-main);">Filtrar por Idioma:</span>
+    <select style="padding: 0.5rem 1rem; border-radius: 12px; border: 2px solid transparent; background: white; font-family: Outfit; font-size: 1rem; outline: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: var(--text-main);">
+      <option>Todos los idiomas</option>
+      <option>Inglés</option>
+      <option>Francés</option>
+      <option>Portugués</option>
+    </select>
+  </div>
+
+  <!-- Tutor List Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+    
+    @for (tutor of tutors(); track tutor.id) {
+      <div class="bento-card" style="display: flex; flex-direction: column; gap: 1rem;">
+        
+        <!-- Header: Avatar + Info -->
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <img [src]="tutor.avatarUrl" alt="Foto de {{ tutor.name }}" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--surface-bg);">
+          <div>
+            <h3 style="margin: 0; color: var(--text-main); font-size: 1.3rem;">{{ tutor.name }}</h3>
+            <p style="margin: 0; color: var(--clay-dark); font-weight: 600;">{{ tutor.language }}</p>
+            <p style="margin: 0; color: var(--text-light); font-size: 0.85rem;">📍 {{ tutor.country }}</p>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <p style="color: var(--text-light); margin: 0; flex-grow: 1; line-height: 1.5; font-size: 0.95rem;">
+          "{{ tutor.bio }}"
+        </p>
+
+        <!-- Stats -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface-bg); padding: 0.75rem 1rem; border-radius: 12px; margin-top: auto;">
+          <span style="font-weight: 800; color: var(--green-deep);">⭐ {{ tutor.rating }}</span>
+          <span style="font-weight: 800; color: var(--text-main);">${{ tutor.hourlyRate }} <span style="font-size: 0.8rem; font-weight: normal;">/ hora</span></span>
+        </div>
+
+        <!-- Action -->
+        <button class="btn-bento btn-cobalt" style="width: 100%; margin-top: 0.5rem; padding: 0.75rem; border-radius: 14px;">
+          Reservar Clase
+        </button>
+      </div>
+    }
+
+  </div>
+</div>

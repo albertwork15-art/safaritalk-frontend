@@ -1,0 +1,53 @@
+<div class="home-container" style="max-width: 1000px; margin: 2rem auto; padding: 0 1rem;">
+  
+  <!-- HERO SECTION -->
+  <header style="text-align: center; margin-bottom: 4rem;">
+    <h1 style="font-size: 3.5rem; color: var(--green-deep); line-height: 1.1;">Explora Nuevos <br/><span style="color: var(--clay);">Horizontes</span></h1>
+    <p style="font-size: 1.25rem; color: var(--text-light); margin-top: 1rem; margin-bottom: 2.5rem;">
+      {{ welcomeMessage() }}
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <button class="btn-bento btn-cobalt" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;" routerLink="/tutors">
+        Encontrar Tutor
+      </button>
+      <button class="btn-bento btn-clay" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;" routerLink="/become-tutor">
+        Convertirse en Tutor
+      </button>
+    </div>
+  </header>
+
+  <!-- FEATURES (Bento Grid) -->
+  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+    
+    <div class="bento-card" style="background-color: var(--surface-card);">
+      <h3 style="color: var(--clay-dark); font-size: 1.5rem;">Sesiones 1 a 1</h3>
+      <p style="color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.6;">
+        Conéctate con profesores a través de videollamadas integradas, y mejora tu nivel de idiomas de forma inmersiva.
+      </p>
+      <!-- Example of an active Bento Button -->
+      <button class="btn-bento btn-green" (click)="toggleFeatures()">
+        {{ showMoreFeatures() ? 'Ocultar extras' : 'Ver beneficios' }}
+      </button>
+      
+      <!-- New Control Flow syntax starting from Angular 17+ -->
+      @if (showMoreFeatures()) {
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 2px dashed #eee;">
+          <p style="font-size: 1rem; color: var(--cobalt-dark); font-weight: 600;">✨ ¡Primera clase de prueba gratis!</p>
+          <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">Reserva de horarios flexibles y 100% acorde a tu zona horaria.</p>
+        </div>
+      }
+    </div>
+
+    <!-- Second Card using an Earth Tone bg directly -->
+    <div class="bento-card" style="background-color: var(--ochre); color: var(--text-main); border: none;">
+      <h3 style="color: var(--text-main); font-size: 1.5rem;">Cultura Auténtica</h3>
+      <p style="color: var(--text-main); line-height: 1.5; opacity: 0.9;">
+        No aprendas solo palabras. Entiende las costumbres, expresiones cotidianas y contexto social de la mano de nuestra comunidad global.
+      </p>
+      
+      <!-- Small floating decorative element -->
+      <div style="margin-top: 2rem; width: 60px; height: 60px; border-radius: 50%; background: white; opacity: 0.3;"></div>
+    </div>
+
+  </section>
+</div>
